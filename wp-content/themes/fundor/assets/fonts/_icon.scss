@@ -1,0 +1,435 @@
+@font-face {
+    font-family: "opal-icon";
+    src: url('assets/fonts/opal-icon.eot');
+    src: url('assets/fonts/opal-icon.eot?#iefix') format('eot'),
+    url('assets/fonts/opal-icon.woff2') format('woff2'),
+    url('assets/fonts/opal-icon.woff') format('woff'),
+    url('assets/fonts/opal-icon.ttf') format('truetype'),
+    url('assets/fonts/opal-icon.svg#opal-icon') format('svg');
+}
+
+[class*="opal-icon-"]:before{
+    font-family: "opal-icon";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.opal-icon {
+    font-family: "opal-icon";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+
+@function opal-icon-char($filename) {
+    $char: "";
+
+    @if $filename == angle-down {
+    $char: "\E001";
+}
+    @if $filename == angle-up {
+    $char: "\E002";
+}
+    @if $filename == calendar {
+    $char: "\E003";
+}
+    @if $filename == campaign {
+    $char: "\E004";
+}
+    @if $filename == campaigns-2 {
+    $char: "\E005";
+}
+    @if $filename == check-circle {
+    $char: "\E006";
+}
+    @if $filename == check {
+    $char: "\E007";
+}
+    @if $filename == children {
+    $char: "\E008";
+}
+    @if $filename == close {
+    $char: "\E009";
+}
+    @if $filename == cog {
+    $char: "\E00A";
+}
+    @if $filename == disaster {
+    $char: "\E00B";
+}
+    @if $filename == donate {
+    $char: "\E00C";
+}
+    @if $filename == earth {
+    $char: "\E00D";
+}
+    @if $filename == education-2 {
+    $char: "\E00E";
+}
+    @if $filename == education {
+    $char: "\E00F";
+}
+    @if $filename == email {
+    $char: "\E010";
+}
+    @if $filename == emergency {
+    $char: "\E011";
+}
+    @if $filename == envelope-open-text {
+    $char: "\E012";
+}
+    @if $filename == envelope {
+    $char: "\E013";
+}
+    @if $filename == family {
+    $char: "\E014";
+}
+    @if $filename == getinvolved {
+    $char: "\E015";
+}
+    @if $filename == givemoney {
+    $char: "\E016";
+}
+    @if $filename == givetime {
+    $char: "\E017";
+}
+    @if $filename == health {
+    $char: "\E018";
+}
+    @if $filename == invest {
+    $char: "\E019";
+}
+    @if $filename == lightbulb-on {
+    $char: "\E01A";
+}
+    @if $filename == live {
+    $char: "\E01B";
+}
+    @if $filename == long-arrow-down {
+    $char: "\E01C";
+}
+    @if $filename == long-arrow-left {
+    $char: "\E01D";
+}
+    @if $filename == long-arrow-right {
+    $char: "\E01E";
+}
+    @if $filename == media {
+    $char: "\E01F";
+}
+    @if $filename == medical {
+    $char: "\E020";
+}
+    @if $filename == menu {
+    $char: "\E021";
+}
+    @if $filename == minus-circle {
+    $char: "\E022";
+}
+    @if $filename == minus-regular {
+    $char: "\E023";
+}
+    @if $filename == minus {
+    $char: "\E024";
+}
+    @if $filename == network {
+    $char: "\E025";
+}
+    @if $filename == phone-square-2 {
+    $char: "\E026";
+}
+    @if $filename == phone {
+    $char: "\E027";
+}
+    @if $filename == phone3 {
+    $char: "\E028";
+}
+    @if $filename == play-2 {
+    $char: "\E029";
+}
+    @if $filename == play-circle {
+    $char: "\E02A";
+}
+    @if $filename == play {
+    $char: "\E02B";
+}
+    @if $filename == plus-circle {
+    $char: "\E02C";
+}
+    @if $filename == plus-regular {
+    $char: "\E02D";
+}
+    @if $filename == plus {
+    $char: "\E02E";
+}
+    @if $filename == protection {
+    $char: "\E02F";
+}
+    @if $filename == quote-left {
+    $char: "\E030";
+}
+    @if $filename == quote {
+    $char: "\E031";
+}
+    @if $filename == quote2 {
+    $char: "\E032";
+}
+    @if $filename == search-plus {
+    $char: "\E033";
+}
+    @if $filename == search {
+    $char: "\E034";
+}
+    @if $filename == share-alt {
+    $char: "\E035";
+}
+    @if $filename == sharing {
+    $char: "\E036";
+}
+    @if $filename == sliders-v {
+    $char: "\E037";
+}
+    @if $filename == support {
+    $char: "\E038";
+}
+    @if $filename == times {
+    $char: "\E039";
+}
+    @if $filename == toggle {
+    $char: "\E03A";
+}
+    @if $filename == topic {
+    $char: "\E03B";
+}
+    @if $filename == user-headset {
+    $char: "\E03C";
+}
+    @if $filename == user {
+    $char: "\E03D";
+}
+    @if $filename == users {
+    $char: "\E03E";
+}
+    @if $filename == video {
+    $char: "\E03F";
+}
+    @if $filename == volunteer {
+    $char: "\E040";
+}
+    @if $filename == wildlife {
+    $char: "\E041";
+}
+
+@return $char;
+}
+
+@mixin opal-icon($filename, $insert: before) {
+&:#{$insert} {
+    content: opal-icon-char($filename);
+}
+}
+
+.opal-icon-angle-down {
+    @include opal-icon(angle-down);
+}
+.opal-icon-angle-up {
+    @include opal-icon(angle-up);
+}
+.opal-icon-calendar {
+    @include opal-icon(calendar);
+}
+.opal-icon-campaign {
+    @include opal-icon(campaign);
+}
+.opal-icon-campaigns-2 {
+    @include opal-icon(campaigns-2);
+}
+.opal-icon-check-circle {
+    @include opal-icon(check-circle);
+}
+.opal-icon-check {
+    @include opal-icon(check);
+}
+.opal-icon-children {
+    @include opal-icon(children);
+}
+.opal-icon-close {
+    @include opal-icon(close);
+}
+.opal-icon-cog {
+    @include opal-icon(cog);
+}
+.opal-icon-disaster {
+    @include opal-icon(disaster);
+}
+.opal-icon-donate {
+    @include opal-icon(donate);
+}
+.opal-icon-earth {
+    @include opal-icon(earth);
+}
+.opal-icon-education-2 {
+    @include opal-icon(education-2);
+}
+.opal-icon-education {
+    @include opal-icon(education);
+}
+.opal-icon-email {
+    @include opal-icon(email);
+}
+.opal-icon-emergency {
+    @include opal-icon(emergency);
+}
+.opal-icon-envelope-open-text {
+    @include opal-icon(envelope-open-text);
+}
+.opal-icon-envelope {
+    @include opal-icon(envelope);
+}
+.opal-icon-family {
+    @include opal-icon(family);
+}
+.opal-icon-getinvolved {
+    @include opal-icon(getinvolved);
+}
+.opal-icon-givemoney {
+    @include opal-icon(givemoney);
+}
+.opal-icon-givetime {
+    @include opal-icon(givetime);
+}
+.opal-icon-health {
+    @include opal-icon(health);
+}
+.opal-icon-invest {
+    @include opal-icon(invest);
+}
+.opal-icon-lightbulb-on {
+    @include opal-icon(lightbulb-on);
+}
+.opal-icon-live {
+    @include opal-icon(live);
+}
+.opal-icon-long-arrow-down {
+    @include opal-icon(long-arrow-down);
+}
+.opal-icon-long-arrow-left {
+    @include opal-icon(long-arrow-left);
+}
+.opal-icon-long-arrow-right {
+    @include opal-icon(long-arrow-right);
+}
+.opal-icon-media {
+    @include opal-icon(media);
+}
+.opal-icon-medical {
+    @include opal-icon(medical);
+}
+.opal-icon-menu {
+    @include opal-icon(menu);
+}
+.opal-icon-minus-circle {
+    @include opal-icon(minus-circle);
+}
+.opal-icon-minus-regular {
+    @include opal-icon(minus-regular);
+}
+.opal-icon-minus {
+    @include opal-icon(minus);
+}
+.opal-icon-network {
+    @include opal-icon(network);
+}
+.opal-icon-phone-square-2 {
+    @include opal-icon(phone-square-2);
+}
+.opal-icon-phone {
+    @include opal-icon(phone);
+}
+.opal-icon-phone3 {
+    @include opal-icon(phone3);
+}
+.opal-icon-play-2 {
+    @include opal-icon(play-2);
+}
+.opal-icon-play-circle {
+    @include opal-icon(play-circle);
+}
+.opal-icon-play {
+    @include opal-icon(play);
+}
+.opal-icon-plus-circle {
+    @include opal-icon(plus-circle);
+}
+.opal-icon-plus-regular {
+    @include opal-icon(plus-regular);
+}
+.opal-icon-plus {
+    @include opal-icon(plus);
+}
+.opal-icon-protection {
+    @include opal-icon(protection);
+}
+.opal-icon-quote-left {
+    @include opal-icon(quote-left);
+}
+.opal-icon-quote {
+    @include opal-icon(quote);
+}
+.opal-icon-quote2 {
+    @include opal-icon(quote2);
+}
+.opal-icon-search-plus {
+    @include opal-icon(search-plus);
+}
+.opal-icon-search {
+    @include opal-icon(search);
+}
+.opal-icon-share-alt {
+    @include opal-icon(share-alt);
+}
+.opal-icon-sharing {
+    @include opal-icon(sharing);
+}
+.opal-icon-sliders-v {
+    @include opal-icon(sliders-v);
+}
+.opal-icon-support {
+    @include opal-icon(support);
+}
+.opal-icon-times {
+    @include opal-icon(times);
+}
+.opal-icon-toggle {
+    @include opal-icon(toggle);
+}
+.opal-icon-topic {
+    @include opal-icon(topic);
+}
+.opal-icon-user-headset {
+    @include opal-icon(user-headset);
+}
+.opal-icon-user {
+    @include opal-icon(user);
+}
+.opal-icon-users {
+    @include opal-icon(users);
+}
+.opal-icon-video {
+    @include opal-icon(video);
+}
+.opal-icon-volunteer {
+    @include opal-icon(volunteer);
+}
+.opal-icon-wildlife {
+    @include opal-icon(wildlife);
+}
